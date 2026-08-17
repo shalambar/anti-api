@@ -1,0 +1,43 @@
+{
+  "name": "anti-api",
+  "version": "3.1.0",
+  "description": "Independent local protocol-compatibility and routing proxy for OpenAI- and Anthropic-style clients",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/main.ts start",
+    "start": "bun run src/main.ts start",
+    "build": "bun build src/main.ts --outdir dist --target bun",
+    "test": "bun test ./test --test-concurrency 1",
+    "winget:bundle": "bun run scripts/build-winget-package.ts",
+    "winget:manifest": "bun run scripts/update-winget-manifest.ts",
+    "winget:sync": "bash scripts/sync-winget-pkgs.sh"
+  },
+  "dependencies": {
+    "@aws/codewhisperer-streaming-client": "^1.0.40",
+    "@bufbuild/protobuf": "^2.2.3",
+    "@connectrpc/connect": "^2.0.0",
+    "@connectrpc/connect-node": "^2.0.0",
+    "@connectrpc/connect-web": "^2.1.1",
+    "better-sqlite3": "^11.7.0",
+    "citty": "^0.1.6",
+    "consola": "^3.2.3",
+    "hono": "^4.6.14",
+    "localtunnel": "^2.0.2",
+    "undici": "^7.16.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/bun": "latest",
+    "@types/localtunnel": "^2.0.4",
+    "typescript": "^5.7.2"
+  },
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ink1ing/anti-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ink1ing/anti-api/issues"
+  }
+}

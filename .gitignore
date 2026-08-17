@@ -1,0 +1,14 @@
+node_modules/
+dist/
+data/
+.DS_Store
+.env*
+.claude/
+proj-1/
+proj-2/
+rust-proxy/target/
+anti-api-v*.zip
+anti-api-v*/
+anti-api-test-bundle/
+packaging/winget/manifests/
+kiro-gateway/
